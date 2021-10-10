@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: cplatero-cloud-portal
+  cloud:
+    config:
+      label: development
+  config:
+    label: staging
+    import: optional:configserver:http://127.0.0.1:9080/
+        
+server:
+  port: 9580
+  servlet:
+    contextPath: /cplatero-cloud-portal
